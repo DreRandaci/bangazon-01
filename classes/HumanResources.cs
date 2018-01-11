@@ -27,6 +27,8 @@ namespace bangazon_01
             [{'vacation':'Unlimited vacation for everyone!!'}]
         */
         private Dictionary<string, string> _policies = new Dictionary<string, string>();
+        public string _meeting_place { get; set; } = "Somewhere appropriate";
+        double Budget { get; set; } = 1213123.132;
 
         /*
             Since the parent class defined a constructor with three
@@ -54,6 +56,20 @@ namespace bangazon_01
             {
                 Console.WriteLine($"{policy.Value}");
             }
+        }
+        public override void meet()
+        {
+            Console.WriteLine(_meeting_place);
         }        
+
+        public override void SetBudget(double budget)
+        {
+            // The sales department needs more money than most others
+            this.Budget -= budget;
+        }
+        public override string getBudget()
+        {
+            return $"Budget: {this.Budget}";
+        }
     }
 }
