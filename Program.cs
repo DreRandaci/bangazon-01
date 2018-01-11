@@ -22,11 +22,11 @@ namespace bangazon_01
 
             // Iterate over all items in the list and output a string
             // representation of the class
-            // foreach (Department d in departments)
-            // {
-            //     Console.WriteLine($"{d.toString()}");
-            //     d.meet();
-            // }
+            foreach (Department d in departments)
+            {
+                Console.WriteLine($"{d.toString()}");
+                d.meet();
+            }
 
             double baseBudget = 75000.00;
 
