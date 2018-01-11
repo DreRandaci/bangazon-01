@@ -10,6 +10,9 @@ namespace bangazon_01
         private int _employee_count;
 
         // You can create properties, if needed
+        private string _metting_place { get; set; } = "Conference Room";
+
+        private double Budget { get; set; }
 
         // Constructor method
         public Department(string name, string supervisor, int employees)
@@ -18,9 +21,20 @@ namespace bangazon_01
             _supervisor = supervisor;
             _employee_count = employees;
         }
-        public string toString() 
+        public string toString()
         {
-            return $"{_name} {_supervisor} {_employee_count}"; 
+            return $"Department: {_name}; Manager: {_supervisor}; Employee count: {_employee_count}";
+        }
+        public virtual void meet()
+        {
+            Console.WriteLine(_metting_place);
+        }
+
+        public virtual void SetBudget(double budget) => this.Budget += budget;
+
+        public virtual string getBudget()
+        {
+            return $"Budget: {this.Budget}";
         }
     }
 }
