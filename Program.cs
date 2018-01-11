@@ -26,15 +26,15 @@ namespace bangazon_01
             // Iterate over all items in the list and output a string
             // representation of the class
 
-            // double baseBudget = 75000.00;
-            // foreach (Department d in departments)
-            // {
-            //     d.SetBudget(baseBudget);
-            //     Console.WriteLine(d.getBudget());
-            //     Console.WriteLine();
-            //     Console.WriteLine($"{d.toString()}");                
-            //     Console.WriteLine();
-            // }
+            double baseBudget = 75000.00;
+            foreach (Department d in departments)
+            {
+                d.SetBudget(baseBudget);
+                Console.WriteLine(d.getBudget());
+                Console.WriteLine();
+                Console.WriteLine($"{d.toString()}");                
+                Console.WriteLine();
+            }
 
             List<Employee> companions = new List<Employee>();
             Employee dre = new Employee("Dre", "Randaci");
